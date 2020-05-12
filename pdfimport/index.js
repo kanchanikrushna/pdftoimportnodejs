@@ -54,7 +54,6 @@ module.exports = async (context, myBlob) => {
                 } catch (error) {
                     console.log(err);
                     if(i === files.length -1){
-
                         removeDir(outPutDir);
                         context.done();
                     }
