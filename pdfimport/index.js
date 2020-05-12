@@ -36,6 +36,7 @@ module.exports = async (context, myBlob) => {
         await splitPdfIntoJpg(file, outPutDir, outFileName);
 
         fs.readdir(outPutDir, async (err, files) => {
+            // TODO convert to async.Parallel
             for (let i = 0; i < files.length; i++) {
                 const file = files[i];
                 let filePath = path.join(outPutDir, file);
